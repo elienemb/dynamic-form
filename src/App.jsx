@@ -1,6 +1,5 @@
-
-import inputSchema from "./inputSchema.json";
-import RegistrationForm from "./components/RegistrationForm";
+import inputSchema from "./components/schema/inputSchema.json";
+import Form from "./components/form/Form";
 import Header from "./components/header/Header";
 
 function App() {
@@ -8,7 +7,7 @@ function App() {
     <>
       <Header />
       <main role="main">
-        <RegistrationForm schema={inputSchema} />
+        <Form schema={inputSchema} />
       </main>
     </>
   );
