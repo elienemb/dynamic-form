@@ -67,7 +67,11 @@ Tailwind directives in `src/index.css`:
 ```css
 @import "tailwindcss";
 ```
+## ♿ Accessibility Audit
 
+This form was tested using [axe DevTools](https://www.deque.com/axe/devtools/) and passed with **0 accessibility issues**.
+
+![Accessibility Audit - 0 Issues](./public/accessibility-audit-axe.webp)
 
 ## License
 This project is for technical evaluation purposes only.

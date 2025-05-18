@@ -10,6 +10,9 @@ export default function CheckboxField({ label, name, value, onChange, error }) {
           />
           {label}
         </label>
+        <p id="subscribe-help" className="sr-only">
+          Press space to toggle this checkbox
+        </p>
         {error && (
           <span role="alert" className="text-red-500 text-sm ml-4">
             {error}
