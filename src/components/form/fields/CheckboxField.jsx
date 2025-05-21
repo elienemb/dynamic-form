@@ -7,6 +7,7 @@ export default function CheckboxField({ label, name, value, onChange, error }) {
             name={name}
             checked={value || false}
             onChange={(e) => onChange(name, e.target.checked)}
+            className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
           />
           {label}
         </label>

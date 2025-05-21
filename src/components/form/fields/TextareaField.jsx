@@ -11,9 +11,9 @@ export default function TextareaField({ id, label, name, value, onChange, error 
           onChange={(e) => onChange(name, e.target.value)}
           aria-invalid={!!error}
           aria-describedby={error ? `${id}-error` : undefined}
-          className={`border ${
+          className={`w-full border ${
             error ? "border-red-500" : "border-gray-300"
-          } rounded p-2`}
+          } rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500`}
         />
         {error && (
           <span
