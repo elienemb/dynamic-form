@@ -1,4 +1,3 @@
-
 export default function RadioField({
   id,
   label,
@@ -12,27 +11,26 @@ export default function RadioField({
     <fieldset className="mb-4">
       <legend className="mb-1 font-medium">{label}</legend>
       <div className="flex flex-col gap-2">
-        {options.map((opt, idx) => {
-          const optionId = `${id}-${idx}`;
-          return (
-            <label
-              key={optionId}
-              htmlFor={optionId}
-              className="inline-flex items-center gap-2"
-            >
-              <input
-                type="radio"
-                id={optionId}
-                name={name}
-                value={opt}
-                checked={value === opt}
-                onChange={(e) => onChange(name, e.target.value)}
-                aria-invalid={!!error}
-              />
-              {opt}
-            </label>
-          );
-        })}
+        {options.map((opt, idx) => (
+          <label
+            key={`${name}-${idx}`}
+            htmlFor={`${id}-${idx}`}
+            className="inline-flex items-center space-x-2"
+          >
+            <input
+              type="radio"
+              id={`${id}-${idx}`}
+              name={name}
+              value={opt.value}
+              checked={value === opt.value}
+              onChange={() => onChange(name, opt.value)} 
+              aria-invalid={!!error}
+              aria-describedby={error ? `${id}-error` : undefined}
+              className="text-blue-600 focus:ring-blue-500 h-4 w-4 border-gray-300"
+            />
+            <span>{opt.label}</span>
+          </label>
+        ))}
       </div>
       {error && (
         <span
