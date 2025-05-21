@@ -9,6 +9,16 @@
         "type": "select",
         "name": "gender",
         "options": ["Male", "Female", "Other"]
+        },
+        {
+            "label": "Favourite JS Framework",
+            "type": "radio",    
+            "name": "framework",
+            "options": [
+                { "label": "React", "value": "react" },
+                { "label": "Vue", "value": "vue" },
+                { "label": "Angular", "value": "angular" }
+            ]
         }
     ]
 }
